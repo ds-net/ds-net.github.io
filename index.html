@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dávid Fazekas</title>
+  <link rel="icon" type="image/png" href="https://img.icons8.com/ios-filled/50/40C057/engineering.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+ <style>
+body {
+  font-family: Arial, sans-serif;
+  color: #d9d9d9; /* Lighter text color */
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to top left, #141414 30%, #18301e 75%);
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.container header p {
+  width: 60%;
+  margin: 20px auto;
+  font-size: 1.3rem; /* Increased font size */
+  line-height: 1.5;
+  padding: 15px; /* Add padding for the background box */
+  background-color: rgba(0, 0, 0, 0.30); /* Semi-transparent black background */
+  border-radius: 30px; /* Add border radius for rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35); /* Add a subtle shadow for depth */
+}
+
+header h1 {
+  position: relative;
+}
+
+header h1::before,
+header h1::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 8%;
+  height: 1px;
+  background-color: #2f9e44; /* Color of the lines */
+}
+
+header h1::before {
+  left: 30%; /* Adjust distance from the text */
+}
+
+header h1::after {
+  right: 30%; /* Adjust distance from the text */
+}
+
+
+header {
+  margin-bottom: 50px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #2f9e44;
+}
+
+h2 {
+  color: #2f9e44;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+.section-header {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.section-header:before {
+  content: "";
+  position: absolute;
+  bottom: -5px; /* Adjusted to leave a bit cut off from the edges */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75px;
+  height: 3px;
+  background-color: #4CAF50;
+}
+
+.skills,
+.education,
+.websites,
+.interests {
+  margin-top: 50px;
+}
+
+.skills h2,
+.education h2,
+.websites h2,
+.interests h2 {
+  color: #4CAF50;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+li {
+  margin: 10px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.25); /* Darker background color for buttons */
+  padding: 10px 20px;
+  cursor: default;
+  position: relative;
+  box-shadow: 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Add shadow */
+}
+
+li i {
+  margin-right: 10px;
+  color: #2f9e44; /* Dark green text */
+}
+
+li a {
+  color: #2f9e44; /* Dark green text */
+  text-decoration: none;
+}
+
+li .tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 20px;
+  border-radius: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 1;
+  width: 350px;
+  background-color: #111; /* Darker background color for tooltip on hover */
+  color: #ccc; /* Slightly darker text color for tooltip on hover */
+}
+
+li:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px; /* Smaller margin top */
+  padding: 10px 0; /* Smaller padding */
+  background-color: #1a1a1a; /* Darker background color */
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.8rem; /* Slightly smaller font size */
+  color: #666666; /* Darker text color */
+}
+
+.contact-info {
+  font-size: 0.2rem; /* Decrease font size */
+  margin-bottom: 10px; /* Decrease margin after this section */
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info ul li {
+  font-size: 0.99rem; /* Decrease font size */
+  margin-top: 5px; /* Decrease margin between items */
+}
+
+.contact-info i {
+  margin-right: 5px; /* Adjust icon spacing */
+}
+
+.education li .tooltip {
+  bottom: auto; /* Remove the bottom positioning */
+  top: 100%; /* Position the tooltip towards the bottom */
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
+
+/* Override margin for skills section */
+.skills li {
+  margin: 16px; /* Increased margin */
+}
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>
+      <span class="line"></span>Dávid Fazekas<span class="line"></span>
+    </h1>
+    <small class="contact-info">
+      <ul>
+        <li><i class="fas fa-envelope"></i> dsmail.net@protonmail.com</a></li>
+        <li><i class="fas fa-phone"></i> +36 20 276 2075</a></li>
+        <li><i class="fas fa-map-marker-alt"></i> Budapest - Hungary</li>
+      </ul>
+    </small>
+    <p>Hi! I'm a junior system administrator graduate with a comprehensive expertise in the world of IT.</p>
+  </header>
+  
+<section class="skills">
+  <h2 class="section-header">Skills</h2>
+  <ul>
+    <li><i class="fas fa-network-wired"></i> Networking Protocols<span class="tooltip">Understanding of network protocols such as TCP/IP, DNS, DHCP.</span></li>
+    <li><i class="fas fa-server"></i> Application & Server Management<span class="tooltip">Experience in managing applications and servers in a production environment.</span></li>
+    <li><i class="fas fa-cogs"></i> Task Automation<span class="tooltip">Experience with automating repetitive tasks using scripting languages like PowerShell and Bash.</span></li>
+    <li><i class="fas fa-users"></i> AD & Account Control<span class="tooltip">Knowledge of Active Directory management and user account control.</span></li>
+  </ul>
+  <ul>
+    <li><i class="fas fa-terminal"></i> PowerShell & Bash Scripting<span class="tooltip">Experience in scripting and automation using PowerShell and Bash.</span></li>
+    <li><i class="fas fa-database"></i> SQL Database Management<span class="tooltip">Experience in managing and querying SQL databases.</span></li>
+    <li><i class="fas fa-server"></i> Virtualization<span class="tooltip">Experience with virtualization platforms such as KVM, Hyper-V, VirtualBox, and Oracle.</span></li>
+    <li><i class="fas fa-clipboard-list"></i> Ticketing Tools<span class="tooltip">Familiarity with ticketing systems for IT service management.</span></li>
+    <li><i class="fas fa-hdd"></i> Backups<span class="tooltip">Understanding of backup strategies and implementation.</span></li>
+  </ul>
+  <ul>
+    <li><i class="fab fa-windows"></i> Windows<span class="tooltip">Experience in administration of Windows-based systems.</span></li>
+    <li><i class="fab fa-linux"></i> Linux<span class="tooltip">In-depth experience with Linux operating systems and command-line usage & scripting.</span></li>
+    <li><i class="fas fa-cloud"></i> Azure Cloud Services<span class="tooltip">Experience in deploying and managing services on the Microsoft Azure cloud platform.</span></li>
+    <li><i class="fas fa-cog"></i> Configuration Management<span class="tooltip">Managing system & network configurations, using containers to customize and automate config deployment, setting up physical devices.</span></li>
+    <li><i class="fas fa-chart-line"></i> Resource Monitoring<span class="tooltip">Ability to monitor and analyze system resources for performance optimization.</span></li>
+  </ul>
+  <ul>
+    <li><i class="fas fa-project-diagram"></i> Agile DevOps Mindset<span class="tooltip">Adopting agile methodologies and DevOps practices for software development.</span></li>
+    <li><i class="fas fa-cogs"></i> ITIL Frameworks<span class="tooltip">Understanding of IT Infrastructure Library (ITIL) practices for IT service management.</span></li>
+    <li><i class="fas fa-exclamation-triangle"></i> Incident Handling & Security<span class="tooltip">Knowledge of incident response procedures and cybersecurity practices.</span></li>
+    <li><i class="fab fa-html5"></i> Front-End | HTML, CSS, JavaScript<span class="tooltip">Experience in front-end web development technologies.</span></li>
+  </ul>
+</section>
+  
+  <section class="education">
+    <h2 class="section-header">Education</h2>
+    <ul>
+      <li><i class="fas fa-graduation-cap"></i> System Administrator Qualification - Ruander Oktatóközpont<span class="tooltip">2023 08. - 2024 02. | Hungary</span></li>
+      </ul>
+      <ul>
+      <li><i class="fas fa-graduation-cap"></i> Networking/System Management Course - Cisco Networking Academy<span class="tooltip">2023 08. - Ongoing</span></li>
+      </ul>
+      <ul>
+      <li><i class="fas fa-graduation-cap"></i> High School Diploma | English B2-Level Language Certification</li>
+    </ul>
+    <ul>
+      <li><i class="fas fa-graduation-cap"></i> Planned courses: Azure AZ-900, AZ-500, AZ-400, Cybersecurity Certification, Python Course</li>
+    </ul>
+  </section>
+  
+    <section class="interests">
+    <h2 class="section-header">Other Interests</h2>
+    <ul>
+      <li><i class="fas fa-code"></i> Python Development</li>
+      <li><i class="fas fa-brain"></i> AI Frameworks</li>
+      <li><i class="fas fa-shield-alt"></i> Cybersecurity & Risk Management</li>
+      </ul>
+      <ul>
+      <li><i class="fas fa-tools"></i> DevOps</li>
+      <li><i class="fas fa-user-secret"></i> Penetration Testing</li>
+      <li><i class="fas fa-server"></i> Homelab Projects</li>
+    </ul>
+  </section>
+  
+<section class="websites">
+  <h2 class="section-header">Sources</h2>
+  <ul>
+    <li><a href="https://www.linkedin.com/in/ds-net" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+    <li><a href="https://linkedin.com/school/ruander-suli" target="_blank"><i class="fas fa-globe"></i> Ruander</a></li>
+  </ul>
+</section>
+</div>
+
+<footer>
+  <p>&copy; 2024 Dávid Fazekas.</p>
+</footer>
+
+</body>
+</html>
