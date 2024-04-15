@@ -140,7 +140,7 @@ li .tooltip {
   visibility: hidden;
   transition: opacity 0.3s, visibility 0.3s;
   z-index: 1;
-  width: 350px;
+  width: 375px;
   background-color: #111; /* Darker background color for tooltip on hover */
   color: #ccc; /* Slightly darker text color for tooltip on hover */
 }
